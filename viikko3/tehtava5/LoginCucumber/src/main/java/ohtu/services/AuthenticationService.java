@@ -40,7 +40,18 @@ public class AuthenticationService {
 
     private boolean invalid(String username, String password) {
         // validity check of username and password
+        if (username.length()<3 || password.length()<8) {
+            return true;
+        }
 
-        return false;
+        boolean onNumero = false;
+        for (char c: password.toCharArray()) {
+            if(Character.isDigit(c)) {
+                onNumero = true;
+                break;
+            }
+        }
+
+        return !onNumero;
     }
 }
