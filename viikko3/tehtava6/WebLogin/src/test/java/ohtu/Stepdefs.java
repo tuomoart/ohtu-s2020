@@ -56,9 +56,7 @@ public class Stepdefs {
 
     @Given("command new user is selected")
     public void commandNewUserIsSelected() {
-        driver.get(baseUrl);
-        WebElement element = driver.findElement(By.linkText("register new user"));       
-        element.click();   
+        selectCreateUser();   
     }
 
     @When("a valid username {string} and password {string} and matching password confirmation are entered")
@@ -89,6 +87,18 @@ public class Stepdefs {
     @When("a correct username {string} and password {string} and password confirmation {string} are given")
     public void aCorrectUsernameAndPasswordAndPasswordConfirmationAreGiven(String string, String string2, String string3) {
         createUserWith(string, string2, string3);
+    }
+
+    @Given("user with username {string} with password {string} is successfully created")
+    public void userWithUsernameWithPasswordIsSuccessfullyCreated(String string, String string2) {
+        selectCreateUser();
+        createUserWith(string, string2, string2);
+    }
+
+    @Given("user with username {string} and password {string} is tried to be created")
+    public void userWithUsernameAndPasswordIsTriedToBeCreated(String string, String string2) {
+        selectCreateUser();
+        createUserWith(string, string2, string2);
     }
     
     @After
@@ -122,5 +132,11 @@ public class Stepdefs {
         element.sendKeys(confirmation);
         element = driver.findElement(By.name("signup"));
         element.submit();  
+    }
+
+    private void selectCreateUser() {
+        driver.get(baseUrl);
+        WebElement element = driver.findElement(By.linkText("register new user"));       
+        element.click();
     }
 }
