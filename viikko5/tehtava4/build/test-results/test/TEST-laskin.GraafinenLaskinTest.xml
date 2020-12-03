@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="laskin.GraafinenLaskinTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-12-01T14:51:09" hostname="lx8-fuxi055" time="0.335">
+  <properties/>
+  <testcase name="test1" classname="laskin.GraafinenLaskinTest" time="0.335"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

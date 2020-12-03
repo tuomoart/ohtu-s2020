@@ -1,0 +1,4 @@
+laskin/GraafinenLaskin1Test.java
+ laskin.GraafinenLaskin1Test
+laskin/GraafinenLaskinTest.java
+ laskin.GraafinenLaskinTest
